@@ -62,7 +62,15 @@ class Game {
     // Adicionar sprite de moeda no jogo
     this.addSprites(powerCoins, 18, powerCoinImage, 0.09);
   }
+this.addSprites(
+obstacles,
+obstaclesPositions.length,
+obstaclelImage,
+0.04,
 
+obstaclesPositions
+};
+}
   addSprites(spriteGroup, numberOfSprites, spriteImage, scale) {
     for (var i = 0; i < numberOfSprites; i++) {
       var x, y;
@@ -213,4 +221,22 @@ class Game {
       player.update();
     }
   }
+handleFuel (index) {
+
+cars[index - 1].overlap (fuels, function (collector, collected) { 
+player. fuel 185;
+collected.remove(); 
+
+});
+HandlePowercoins (index) {
+
+cars[index - 1].overlap (powerCoins, function (collector, collected) {
+
+player.score += 21;
+
+player.update(); 
+
+collected.remove();
+  });
+}
 }
